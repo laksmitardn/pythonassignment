@@ -1,0 +1,36 @@
+# pythonassignment
+
+## making chatbot
+### type thank you for end the chat
+
+from random import randrange
+
+respose_message = [
+    'mmmm',
+    'Ya! Sedimentary rock',
+    'great! mention another',
+    'Ok, metamorphic rock',
+    'Nice! Igneous rock',
+    'awesome! keep study hard!'
+]
+
+def get_response():
+    random_index = randrange ( len( respose_message))
+    return respose_message[ random_index ]
+
+def main():
+    
+    print("mitaa > Hi there! Can you guess the main types of rock?")
+    
+    while( True ):
+        user_message = input('You > ')
+        
+        if user_message.lower() == "thank you": # you can custom
+            print("mitaa > see you~")
+            break
+            
+        mitaa_response = 'mitaa > ' + get_response()
+        print(mitaa_response)
+        
+if __name__ == "__main__":
+    main()
